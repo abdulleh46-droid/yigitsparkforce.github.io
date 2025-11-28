@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Yiğit SparkForce — Elektrik & Enerji Sistemleri</title>
+  <meta name="description" content="Yiğit SparkForce — Kahramanmaraş / Türkoğlu bölgesinde profesyonel elektrik, tesisat ve arıza hizmetleri." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --accent:#ff3b30;
+      --accent2:#ff6b60;
+      --dark:#0a0a0a;
+      --muted:#6b7280;
+      font-family:Inter,system-ui,Segoe UI,Roboto,'Helvetica Neue',Arial;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      color:#f9fafb;
+      background:#050505;
+      font-family:Inter,system-ui,sans-serif;
+      line-height:1.5;
+    }
+    header{
+      background:linear-gradient(90deg,#1a1a1a 0%, #000 100%);
+      border-bottom:1px solid #18181b;
+    }
+    .container{max-width:1100px;margin:0 auto;padding:20px}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .logo{display:flex;align-items:center;gap:10px}
+    .logo img{height:56px;width:auto;border-radius:12px;filter:drop-shadow(0 0 8px rgba(255,59,48,.6));}
+    .logo-title{display:flex;flex-direction:column;line-height:1.1}
+    .logo-title span:first-child{
+      font-size:22px;
+      font-weight:700;
+      color:#ff3b30;
+      letter-spacing:0.04em;
+      text-transform:uppercase;
+      text-shadow:0 0 10px rgba(255,59,48,0.7);
+    }
+    .logo-title span:last-child{
+      font-size:13px;
+      color:#e5e7eb;
+      font-weight:500;
+    }
+    nav a{
+      color:#e5e7eb;
+      text-decoration:none;
+      font-size:14px;
+    }
+    nav a:hover{color:#fff}
+    .hero{
+      display:grid;
+      grid-template-columns:1.2fr 0.8fr;
+      gap:28px;
+      align-items:center;
+      padding:40px 0;
+      position:relative;
+      overflow:hidden;
+    }
+    .hero::before{
+      content:"";
+      position:absolute;
+      top:-120px;
+      left:-80px;
+      width:320px;
+      height:320px;
+      background:radial-gradient(circle, rgba(255,59,48,0.45), rgba(255,59,48,0));
+      filter:blur(45px);
+      z-index:-1;
+    }
+    .hero::after{
+      content:"";
+      position:absolute;
+      bottom:-140px;
+      right:-100px;
+      width:360px;
+      height:360px;
+      background:radial-gradient(circle, rgba(255,255,255,0.15), rgba(0,0,0,0));
+      filter:blur(60px);
+      z-index:-1;
+    }
+    .hero h1{
+      font-size:30px;
+      margin:0 0 12px;
+      color:#f9fafb;
+    }
+    .hero p{color:#d4d4d8;margin:0 0 18px}
+    .btn-primary{
+      display:inline-block;
+      padding:11px 20px;
+      border-radius:999px;
+      text-decoration:none;
+      font-weight:600;
+      font-size:14px;
+      background:linear-gradient(90deg,#ff3b30,#ff6b60);
+      color:#fff;
+      box-shadow:0 3px 12px rgba(255,59,48,0.4);
+      transition:.25s;
+    }
+    .btn-primary:hover{opacity:.9;transform:translateY(-1px);}
+    .services{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:18px;margin:28px 0;
+    }
+    .card{
+      background:#0b0b0b;
+      border:1px solid #18181b;
+      padding:18px;
+      border-radius:14px;
+      box-shadow:0 8px 22px rgba(0,0,0,0.5);
+      transition:transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+    }
+    .card:hover{
+      transform:translateY(-4px);
+      box-shadow:0 16px 36px rgba(0,0,0,0.85);
+      border-color:rgba(255,59,48,0.5);
+    }
+    .card strong{color:#fb7185}
+    section h2{
+      margin-top:10px;
+      margin-bottom:10px;
+      font-size:22px;
+      color:#f9fafb;
+    }
+    .grid-two{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:18px;
+    }
+    .testimonials{background:#050505;border:1px solid #18181b;border-radius:14px;}
+    .testimonials strong{color:#fb7185}
+    #gallery img{
+      width:100%;
+      height:180px;
+      object-fit:cover;
+      border-radius:10px;
+      transition:transform .25s ease, box-shadow .25s ease, filter .25s ease;
+    }
+    #gallery img:hover{
+      transform:translateY(-3px) scale(1.03);
+      box-shadow:0 18px 38px rgba(0,0,0,0.8);
+      filter:brightness(1.05);
+    }
+    footer{
+      padding:22px 0;
+      color:#a1a1aa;
+      font-size:13px;
+      border-top:1px solid #18181b;
+      margin-top:30px;
+    }
+    a{color:#fb7185}
+    a:hover{color:#f97373}
+    @media(max-width:900px){
+      .hero{grid-template-columns:1fr;padding-top:26px;}
+    }
+    @media(max-width:640px){
+      .nav{flex-direction:column;align-items:flex-start;gap:10px}
+      .hero h1{font-size:24px;}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="logo">
+        <img src="images.jpg" alt="Yiğit SparkForce Logo">
+        <div class="logo-title">
+          <span>Yiğit SparkForce</span>
+          <span>Profesyonel Elektrik &amp; Enerji Çözümleri ⚡</span>
+        </div>
+      </div>
+      <nav>
+        <a href="#services">Hizmetler</a>
+        <a href="#gallery">Projeler</a>
+        <a href="#contact">İletişim</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero" id="hero">
+      <div>
+        <h1>Kahramanmaraş / Türkoğlu'nda profesyonel elektrik ve enerji çözümleri</h1>
+        <p>Elektrik &amp; Elektronik ⚡ • Tadilat &amp; Tamirat 🧑‍🔧 • Tesisat &amp; Arıza 🔌<br>🧑‍💻 Fiyatı bir de bizden duyun! 🧑‍💻</p>
+        <p>
+          <a href="#contact" class="btn-primary">Teklif Al</a>
+          <a href="tel:05436270403" class="btn-primary" style="margin-left:10px;background:transparent;border:1px solid rgba(255,255,255,0.3);box-shadow:none;">📞 Ara: 0543 627 04 03</a>
+        </p>
+        <p style="color:#a1a1aa;font-size:14px;">👨‍🔧👨‍🔧 Abdullah Yiğit 👨‍🔧👨‍🔧</p>
+      </div>
+      <div>
+        <img src="elktrk.jpg" alt="Elektrik pano çalışması" style="width:100%;border-radius:16px;box-shadow:0 20px 40px rgba(0,0,0,0.8);object-fit:cover;">
+      </div>
+    </section>
+
+    <section id="services">
+      <h2>Hizmetlerimiz</h2>
+      <div class="services">
+        <div class="card">
+          <strong>Elektrik &amp; Elektronik</strong>
+          <div style="color:#d4d4d8;margin-top:8px;">Ev, işyeri ve sanayi tipi tesisler için elektrik, pano ve elektronik sistem çözümleri.</div>
+        </div>
+        <div class="card">
+          <strong>Tadilat &amp; Tamirat</strong>
+          <div style="color:#d4d4d8;margin-top:8px;">Eski tesisat yenileme, arızalı hatların onarımı, sigorta ve pano düzenlemeleri.</div>
+        </div>
+        <div class="card">
+          <strong>Tesisat &amp; Arıza</strong>
+          <div style="color:#d4d4d8;margin-top:8px;">Yeni hat çekimi, makine besleme, topraklama, aydınlatma ve acil arıza müdahale.</div>
+        </div>
+        <div class="card">
+          <strong>Endüstriyel Çözümler</strong>
+          <div style="color:#d4d4d8;margin-top:8px;">Fabrika ve işletmeler için pano, kablo tavası, motor hatları ve enerji dağıtım projeleri.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2>Neden Yiğit SparkForce?</h2>
+      <div class="grid-two" style="margin-top:12px;">
+        <div class="card">
+          <ul style="margin:0;padding-left:18px;color:#d4d4d8">
+            <li>Kahramanmaraş / Türkoğlu bölgesinde tecrübeli usta</li>
+            <li>Sahada gerçek pano ve tesisat deneyimi</li>
+            <li>Şeffaf fiyatlandırma, sürpriz maliyet yok</li>
+            <li>WhatsApp üzerinden hızlı teklif imkanı</li>
+          </ul>
+        </div>
+        <div class="card testimonials">
+          <strong>👨‍🔧 Abdullah Yiğit 👨‍🔧</strong>
+          <div style="margin-top:10px;color:#d4d4d8">
+            Gözle görülür, elle tutulur işler — pano, hat, makine ve saha çalışmalarımızı aşağıdaki projeler bölümünde inceleyebilirsiniz.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery">
+      <h2>Yaptığımız İşlerden Kareler</h2>
+      <p style="color:#a1a1aa;margin-top:6px;font-size:14px;">Gerçek projelerden fotoğraflar: pano montajı, vinçli çalışma, saha tesisatı ve daha fazlası.</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:14px;">
+        <div class="card"><img src="elktrk.jpg" alt="Pano montajı"><div style="margin-top:8px;font-size:13px;color:#d4d4d8;">Endüstriyel pano montajı.</div></div>
+        <div class="card"><img src="ekt.jpg" alt="Vinçli çalışma"><div style="margin-top:8px;font-size:13px;color:#d4d4d8;">Yüksekte vinç ile aydınlatma ve hat çalışması.</div></div>
+        <div class="card"><img src="elk.jpg" alt="Kablo tavası"><div style="margin-top:8px;font-size:13px;color:#d4d4d8;">Kablo tavası ve taşıyıcı sistem kurulumu.</div></div>
+        <div class="card"><img src="elektirk.jpg" alt="Makine tesisatı"><div style="margin-top:8px;font-size:13px;color:#d4d4d8;">Makine besleme ve motor bağlantıları.</div></div>
+        <div class="card"><img src="asdsadas.jpg" alt="Saha denetimi"><div style="margin-top:8px;font-size:13px;color:#d4d4d8;">Sahada usta denetimi.</div></div>
+        <div class="card"><img src="XQZM2457[1].JPG" alt="Pano bağlantı"><div style="margin-top:8px;font-size:13px;color:#d4d4d8;">Pano içi bağlantı ve düzenleme.</div></div>
+        <div class="card"><img src="SQKL4046[1].JPG" alt="Toprak altı kablo çıkışı"><div style="margin-top:8px;font-size:13px;color:#d4d4d8;">Toprak altı kablo çıkışı hazırlığı.</div></div>
+        <div class="card"><img src="NMGA0407[1].JPG" alt="Dış pano kurulumu"><div style="margin-top:8px;font-size:13px;color:#d4d4d8;">Dış pano kurulumu ve bara sistemi.</div></div>
+      </div>
+    </section>
+
+    <section id="instagram" style="margin-top:26px;">
+      <h2>Instagram'dan Takip Edin</h2>
+      <p style="color:#a1a1aa;margin-top:6px;font-size:14px;">Daha fazla fotoğraf ve video için Instagram hesabımızı ziyaret edin:</p>
+      <a href="https://www.instagram.com/yigit_elektrik46" target="_blank" class="btn-primary">Instagram: @yigit_elektrik46</a>
+      <p style="color:#71717a;margin-top:10px;font-size:13px;">Dilerseniz belirli video veya Reels bağlantıları ile bu sayfaya gömme (embed) videolar da ekleyebiliriz.</p>
+    </section>
+
+    <section id="contact" style="margin-top:26px;">
+      <h2>İletişim</h2>
+      <div class="grid-two" style="margin-top:12px;">
+        <div class="card">
+          <p style="margin:0 0 8px;color:#d4d4d8;"><strong>Telefon:</strong> <a href="tel:05436270403">0543 627 04 03</a></p>
+          <p style="margin:0 0 8px;color:#d4d4d8;"><strong>E-posta:</strong> <a href="mailto:abdulleh46@gmail.com">abdulleh46@gmail.com</a></p>
+          <p style="margin:0 0 8px;color:#d4d4d8;"><strong>Adres:</strong> Kahramanmaraş / Türkoğlu</p>
+          <p style="margin:0 0 8px;color:#d4d4d8;"><strong>Sosyal:</strong> 
+            <a href="https://www.instagram.com/yigit_elektrik46" target="_blank">Instagram</a> •
+            <a href="https://www.facebook.com/profile.php?id=61566363442591&locale=tr_TR" target="_blank">Facebook</a>
+          </p>
+          <p style="margin-top:10px;">
+            <a href="https://wa.me/905436270403?text=Yi%C4%9FiT%20elektirk'e%20ho%C5%9F%20geldiniz%20size%20nas%C4%B1l%20yard%C4%B1mc%C4%B1%20olabiliriz%20%3F" target="_blank" class="btn-primary" style="background:#25D366;box-shadow:0 3px 12px rgba(37,211,102,0.4);">💬 WhatsApp Mesaj Gönder</a>
+          </p>
+        </div>
+        <div class="card">
+          <p style="margin:0;color:#d4d4d8;">Elektrik &amp; Elektronik ⚡<br>Tadilat &amp; Tamirat 🧑‍🔧<br>Tesisat &amp; Arıza 🔌</p>
+          <p style="margin-top:10px;color:#a1a1aa;font-size:13px;">Her türlü soru, keşif talebi veya fiyat bilgisi için WhatsApp, telefon veya e-posta üzerinden ulaşabilirsiniz.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;">
+      <div>© <strong>Yiğit SparkForce</strong> — Kahramanmaraş / Türkoğlu</div>
+      <div style="color:#71717a;">Hazırlayan: Abdullah Yiğit</div>
+    </div>
+  </footer>
+</body>
+</html>
